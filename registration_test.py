@@ -11,12 +11,14 @@ class RegistrationTest(BaseTest):
     def test_no_fist_name(self):
         print("Starting Registration Test.")
         self.home_page.click_register()
-        self.register_page.choose_gender("male")
+        self.register_page.choose_gender("female")
         self.register_page.enter_last_name()
         self.register_page.enter_email()
         self.register_page.enter_password()
         self.register_page.enter_confirm_password()
         self.register_page.click_register_button()
-
+        visible_errors = self.register_page.get_visible_errors()
+        expected_errors = ["First name is required."]
+        self.assertCountEqual(expected_errors, visible_errors)
+        print("Test passed: correct error message")
         time.sleep(3)
-        pass

@@ -10,12 +10,13 @@ class Locators:
     PASSWORD = (By.ID, "Password")
     CONFIRM_PASSWORD = (By.ID, "ConfirmPassword")
     REGISTER_BUTTON = (By.ID, "register-button")
+    VISIBLE_ERRORS = (By.XPATH, '/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[2]/span[2]/span')
 
 class RegistrationPage(BasePage):
     def choose_gender(self, gender):
-        if gender == "male":
+        if gender.lower() == "male":
             self.click(Locators.MALE_RADIO)
-        elif gender == "female":
+        elif gender.lower() == "female":
             self.click(Locators.FEMALE_RADIO)
 
     def enter_first_name(self):
@@ -35,3 +36,10 @@ class RegistrationPage(BasePage):
 
     def click_register_button(self):
         self.driver.find_element(*Locators.REGISTER_BUTTON).click()
+
+    def get_visible_errors(self):
+        errors_webelements = self.driver.find_elements(*Locators.VISIBLE_ERRORS)
+        visible_errors = []
+        for error in errors_webelements:
+            visible_errors.append(error.text)
+        return visible_errors
