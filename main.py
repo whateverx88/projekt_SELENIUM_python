@@ -13,11 +13,16 @@ class BaseTest(unittest.TestCase):
         options = Options()
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-software-rasterizer")
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-infobars")
+        options.add_argument("--start-maximized")
         self.driver = webdriver.Remote(
         command_executor="http://localhost:4444/wd/hub",
         options=options
     )
-        print("Opening WebDriver...")
+        print("Opening web driver...")
         self.driver.set_page_load_timeout(30)
         self.driver.get("https://demowebshop.tricentis.com/")
         self.driver.maximize_window()
@@ -25,5 +30,5 @@ class BaseTest(unittest.TestCase):
         time.sleep(1)
 
     def tearDown(self):
-        print("Closing WebDriver. Thank you")
+        print("Closing web browser. Thank you.")
         self.driver.quit()

@@ -6,6 +6,7 @@ class RegistrationTest(BaseTest):
         super().setUp()
 
     def test_no_fist_name(self):
+        print("Starting Registration Test.")
         self.home_page.click_register()
         time.sleep(3)
         pass
