@@ -9,7 +9,7 @@ from projekt_SELENIUM_python.pages.home_page import HomePage
 class BaseTest(unittest.TestCase):
     def setUp(self):
 
-        # Additional flags for VM + ARM (M1 MacOS) and DOCKER running
+        # Additional flags for VM + ARM (M1 MacOS) and DOCKER running to keep the setup stable
         options = Options()
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
