@@ -11,6 +11,12 @@ class RegistrationTest(BaseTest):
     def test_no_fist_name(self):
         print("Starting Registration Test.")
         self.home_page.click_register()
+        self.register_page.choose_gender("male")
         self.register_page.enter_last_name()
+        self.register_page.enter_email()
+        self.register_page.enter_password()
+        self.register_page.enter_confirm_password()
+        self.register_page.click_register_button()
+
         time.sleep(3)
         pass
