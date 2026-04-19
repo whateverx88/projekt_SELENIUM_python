@@ -8,7 +8,11 @@ class BasePage:
         self.wait = WebDriverWait(driver, 10)
 
     def find(self, locator):
-        return self.wait.until(EC.element_to_be_clickable(locator))
+        return self.wait.until(EC.presence_of_element_located(locator))
+
+    def find_visible(self, locator):
+        return self.wait.until(EC.visibility_of_element_located(locator))
 
     def click(self, locator):
-        self.find(locator).click()
+        element = self.wait.until(EC.element_to_be_clickable(locator))
+        element.click()

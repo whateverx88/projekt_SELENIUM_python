@@ -1,16 +1,19 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from projekt_SELENIUM_python.pages.base_page import BasePage
 
 class Locators:
     MALE_RADIO = (By.ID, "gender-male")
     FEMALE_RADIO = (By.ID, "gender-female")
-    FIRST_NAME = (By.ID, "LastName")
+    FIRST_NAME = (By.ID, "FirstName")
     LAST_NAME = (By.ID, "LastName")
     EMAIL = (By.ID, "Email")
     PASSWORD = (By.ID, "Password")
     CONFIRM_PASSWORD = (By.ID, "ConfirmPassword")
     REGISTER_BUTTON = (By.ID, "register-button")
     VISIBLE_ERRORS = (By.XPATH, '/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[2]/span[2]/span')
+    CONTINUE_BUTTON = (By.CSS_SELECTOR, ".register-continue-button")
+    REGISTER_PAGE_TITLE = (By.CLASS_NAME, "page-title")
 
 class RegistrationPage(BasePage):
     def choose_gender(self, gender):
@@ -25,8 +28,8 @@ class RegistrationPage(BasePage):
     def enter_last_name(self):
         self.driver.find_element(*Locators.LAST_NAME).send_keys("Smith")
 
-    def enter_email(self):
-        self.driver.find_element(*Locators.EMAIL).send_keys("test@test.pl")
+    def enter_email(self, email):
+        self.driver.find_element(*Locators.EMAIL).send_keys(email)
 
     def enter_password(self):
         self.driver.find_element(*Locators.PASSWORD).send_keys("123qazxsw")
@@ -43,3 +46,9 @@ class RegistrationPage(BasePage):
         for error in errors_webelements:
             visible_errors.append(error.text)
         return visible_errors
+
+    def click_continue_button(self):
+        self.driver.find_element(*Locators.CONTINUE_BUTTON).click()
+
+    def wait_for_page(self):
+        return self.find_visible(Locators.REGISTER_PAGE_TITLE)
