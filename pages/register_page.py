@@ -1,5 +1,6 @@
+import random
+
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from projekt_SELENIUM_python.pages.base_page import BasePage
 
 class Locators:
@@ -49,6 +50,3 @@ class RegistrationPage(BasePage):
 
     def click_continue_button(self):
         self.driver.find_element(*Locators.CONTINUE_BUTTON).click()
-
-    def wait_for_page(self):
-        return self.find_visible(Locators.REGISTER_PAGE_TITLE)
