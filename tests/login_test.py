@@ -1,6 +1,4 @@
-
 from projekt_SELENIUM_python.main import BaseTest
-from projekt_SELENIUM_python.pages.home_page import HomePage
 from projekt_SELENIUM_python.pages.login_page import LoginPage
 import time
 
@@ -27,5 +25,5 @@ class LoginTest(BaseTest):
         self.login_page.enter_password("wrongpassword")
         self.login_page.click_login_button()
         error = self.login_page.get_error_message()
-        self.assertIn("Login was unsuccessful. Please correct the errors and try again.", error)
+        self.assertIn("The credentials provided are incorrect", error)
         print("Test passed: error message displayed: ", error)

@@ -2,10 +2,10 @@ from selenium.webdriver.common.by import By
 from projekt_SELENIUM_python.pages.base_page import BasePage
 
 class Locators:
-    EMAIL = (By.XPATH, '//*[@id="Email"]')
-    PASSWORD = (By.XPATH, '//*[@id="Password"]')
-    LOGIN_BUTTON = (By.XPATH, "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[5]/input")
-    ERROR_MESSAGE = (By.XPATH, "/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]/div[2]/div[2]/form/div[1]")
+    EMAIL = (By.ID, "Email")
+    PASSWORD = (By.ID, "Password")
+    LOGIN_BUTTON = (By.CLASS_NAME, "login-button")
+    ERROR_MESSAGE = (By.XPATH, "//div[@class='validation-summary-errors']//li")
 
 class LoginPage(BasePage):
     def enter_email(self, email):

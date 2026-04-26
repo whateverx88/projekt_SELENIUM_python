@@ -7,9 +7,6 @@ class BasePage:
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
 
-    def find(self, locator):
-        return self.wait.until(EC.presence_of_element_located(locator))
-
     def find_visible(self, locator):
         return self.wait.until(EC.visibility_of_element_located(locator))
 

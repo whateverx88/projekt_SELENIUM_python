@@ -12,10 +12,10 @@ class Locators:
     PASSWORD = (By.ID, "Password")
     CONFIRM_PASSWORD = (By.ID, "ConfirmPassword")
     REGISTER_BUTTON = (By.ID, "register-button")
-    VISIBLE_ERRORS = (By.XPATH, "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[2]/span[2]/span")
+    VISIBLE_ERRORS = (By.XPATH, "//span[@class='field-validation-error']")
     CONTINUE_BUTTON = (By.CSS_SELECTOR, ".register-continue-button")
     REGISTER_PAGE_TITLE = (By.CLASS_NAME, "page-title")
-    ERROR_MESSAGE = (By.XPATH, "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li")
+    ERROR_MESSAGE = (By.XPATH, "//div[@class='message-error']//li")
 
 class RegistrationPage(BasePage):
     def choose_gender(self, gender):
