@@ -12,9 +12,10 @@ class Locators:
     PASSWORD = (By.ID, "Password")
     CONFIRM_PASSWORD = (By.ID, "ConfirmPassword")
     REGISTER_BUTTON = (By.ID, "register-button")
-    VISIBLE_ERRORS = (By.XPATH, '/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[2]/span[2]/span')
+    VISIBLE_ERRORS = (By.XPATH, "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[2]/div[2]/div[2]/span[2]/span")
     CONTINUE_BUTTON = (By.CSS_SELECTOR, ".register-continue-button")
     REGISTER_PAGE_TITLE = (By.CLASS_NAME, "page-title")
+    ERROR_MESSAGE = (By.XPATH, "/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[1]/div/ul/li")
 
 class RegistrationPage(BasePage):
     def choose_gender(self, gender):
@@ -40,6 +41,9 @@ class RegistrationPage(BasePage):
 
     def click_register_button(self):
         self.driver.find_element(*Locators.REGISTER_BUTTON).click()
+
+    def get_error_message(self):
+        return self.find_visible(Locators.ERROR_MESSAGE).text
 
     def get_visible_errors(self):
         errors_webelements = self.driver.find_elements(*Locators.VISIBLE_ERRORS)

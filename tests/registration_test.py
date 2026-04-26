@@ -42,3 +42,18 @@ class RegistrationTest(BaseTest):
         self.assertIn("Your registration completed", self.driver.page_source)
         print("Test passed: registration completed successfully")
         time.sleep(3)
+
+    def test_registration_existing_email(self):
+        print("Starting Registration Test - Existing email")
+        self.home_page.click_register()
+        gender = random.choice(["male", "female"])
+        self.register_page.choose_gender(gender)
+        self.register_page.enter_first_name()
+        self.register_page.enter_last_name()
+        self.register_page.enter_email("test_ALK_TAS@test.pl")
+        self.register_page.enter_password()
+        self.register_page.enter_confirm_password()
+        self.register_page.click_register_button()
+        error = self.register_page.get_error_message()
+        self.assertIn("The specified email already exists", error)
+        print("Test passed: error message displayed: ", error)
