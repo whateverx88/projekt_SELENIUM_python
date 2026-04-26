@@ -1,5 +1,3 @@
-import random
-
 from selenium.webdriver.common.by import By
 from projekt_SELENIUM_python.pages.base_page import BasePage
 
@@ -51,6 +49,3 @@ class RegistrationPage(BasePage):
         for error in errors_webelements:
             visible_errors.append(error.text)
         return visible_errors
-
-    def click_continue_button(self):
-        self.driver.find_element(*Locators.CONTINUE_BUTTON).click()
