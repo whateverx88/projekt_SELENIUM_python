@@ -1,4 +1,4 @@
-from projekt_SELENIUM_python.main import BaseTest
+from projekt_SELENIUM_python.tests.base_test import BaseTest
 from projekt_SELENIUM_python.pages.login_page import LoginPage
 import time
 

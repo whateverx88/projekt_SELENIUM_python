@@ -1,7 +1,7 @@
 import time
 from faker import Faker
 import random
-from projekt_SELENIUM_python.main import BaseTest
+from projekt_SELENIUM_python.tests.base_test import BaseTest
 from projekt_SELENIUM_python.pages.register_page import RegistrationPage
 
 
