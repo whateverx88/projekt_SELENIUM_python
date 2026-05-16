@@ -6,7 +6,9 @@ suite = loader.discover('tests')
 
 runner = HtmlTestRunner.HTMLTestRunner(
     output='reports',
-    report_name='Test Report'
+    report_name='Test Report',
+    report_title='Python/Selenium Automation Report',
+    combine_reports = True
 )
 
 runner.run(suite)

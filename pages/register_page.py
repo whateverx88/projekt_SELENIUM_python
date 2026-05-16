@@ -1,5 +1,8 @@
 from selenium.webdriver.common.by import By
 from projekt_SELENIUM_python.pages.base_page import BasePage
+from projekt_SELENIUM_python.test_data.data_login import LoginData
+from projekt_SELENIUM_python.test_data.data_user import UserData
+
 
 class Locators:
     MALE_RADIO = (By.ID, "gender-male")
@@ -23,19 +26,19 @@ class RegistrationPage(BasePage):
             self.click(Locators.FEMALE_RADIO)
 
     def enter_first_name(self):
-        self.driver.find_element(*Locators.FIRST_NAME).send_keys("John")
+        self.driver.find_element(*Locators.FIRST_NAME).send_keys(UserData.FIRST_NAME)
 
     def enter_last_name(self):
-        self.driver.find_element(*Locators.LAST_NAME).send_keys("Smith")
+        self.driver.find_element(*Locators.LAST_NAME).send_keys(UserData.LAST_NAME)
 
     def enter_email(self, email):
         self.driver.find_element(*Locators.EMAIL).send_keys(email)
 
     def enter_password(self):
-        self.driver.find_element(*Locators.PASSWORD).send_keys("123qazxsw")
+        self.driver.find_element(*Locators.PASSWORD).send_keys(LoginData.PASSWORD)
 
     def enter_confirm_password(self):
-        self.driver.find_element(*Locators.CONFIRM_PASSWORD).send_keys("123qazxsw")
+        self.driver.find_element(*Locators.CONFIRM_PASSWORD).send_keys(LoginData.PASSWORD)
 
     def click_register_button(self):
         self.driver.find_element(*Locators.REGISTER_BUTTON).click()

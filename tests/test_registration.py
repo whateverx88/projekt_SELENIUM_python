@@ -1,6 +1,8 @@
 import time
 from faker import Faker
 import random
+
+from projekt_SELENIUM_python.test_data.data_login import LoginData
 from projekt_SELENIUM_python.tests.base_test import BaseTest
 from projekt_SELENIUM_python.pages.register_page import RegistrationPage
 
@@ -50,7 +52,7 @@ class RegistrationTest(BaseTest):
         self.register_page.choose_gender(gender)
         self.register_page.enter_first_name()
         self.register_page.enter_last_name()
-        self.register_page.enter_email("test_ALK_TAS@test.pl")
+        self.register_page.enter_email(LoginData.EMAIL)
         self.register_page.enter_password()
         self.register_page.enter_confirm_password()
         self.register_page.click_register_button()

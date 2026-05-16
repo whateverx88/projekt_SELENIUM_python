@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Unittest Results</title>
+    <title>Python/Selenium Automation Report</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -10,10 +10,64 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2026-05-10 13:32:18</p>
-                <p class='attribute'><strong>Duration: </strong>29.97 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 3</p>
+                <h2 class="text-capitalize">Python/Selenium Automation Report</h2>
+                <p class='attribute'><strong>Start Time: </strong>2026-05-16 09:34:23</p>
+                <p class='attribute'><strong>Duration: </strong>28.95 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 5, Pass: 5</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_login.LoginTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_login_wrong_password</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Opening web driver...
+Starting Login Test - wrong password
+Test passed: error message displayed:  The credentials provided are incorrect
+Closing web browser. Thank you.
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_successful_login</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Opening web driver...
+Starting Login Test - using previously defined email and password
+Test passed: login successful with test_ALK_TAS@test.pl  user
+Closing web browser. Thank you.
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 2 -- Duration: 10.78 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="row">
@@ -80,7 +134,7 @@ Closing web browser. Thank you.
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 3, Pass: 3 -- Duration: 29.97 s
+                                Total: 3, Pass: 3 -- Duration: 18.17 s
                             </td>
                         </tr>
                     </tbody>

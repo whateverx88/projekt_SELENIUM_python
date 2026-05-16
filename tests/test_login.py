@@ -1,3 +1,4 @@
+from projekt_SELENIUM_python.test_data.data_login import LoginData
 from projekt_SELENIUM_python.tests.base_test import BaseTest
 from projekt_SELENIUM_python.pages.login_page import LoginPage
 import time
@@ -10,8 +11,8 @@ class LoginTest(BaseTest):
     def test_successful_login(self):
         print("Starting Login Test - using previously defined email and password")
         self.home_page.click_login()
-        self.login_page.enter_email("test_ALK_TAS@test.pl")
-        self.login_page.enter_password("123qazxsw")
+        self.login_page.enter_email(LoginData.EMAIL)
+        self.login_page.enter_password(LoginData.PASSWORD)
         self.login_page.click_login_button()
         actual_email = self.home_page.get_logged_user_email()
         self.assertEqual("test_ALK_TAS@test.pl", actual_email)
@@ -21,8 +22,8 @@ class LoginTest(BaseTest):
     def test_login_wrong_password(self):
         print("Starting Login Test - wrong password")
         self.home_page.click_login()
-        self.login_page.enter_email("test_ALK_TAS@test.pl")
-        self.login_page.enter_password("wrongpassword")
+        self.login_page.enter_email(LoginData.EMAIL)
+        self.login_page.enter_password(LoginData.WRONG_PASSWORD)
         self.login_page.click_login_button()
         error = self.login_page.get_error_message()
         self.assertIn("The credentials provided are incorrect", error)
