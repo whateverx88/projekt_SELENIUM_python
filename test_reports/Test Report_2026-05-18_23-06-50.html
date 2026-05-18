@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python/Selenium Automation Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Python/Selenium Automation Report</h2>
+                <p class='attribute'><strong>Start Time: </strong>2026-05-18 23:06:50</p>
+                <p class='attribute'><strong>Duration: </strong>34 ms</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 4, Pass: 0, Error: 4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>unittest.loader._FailedTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">ImportError: Failed to import test module: test_login
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 394, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/loader.py", line 337, in _get_module_from_name
+    __import__(name)
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/test_login.py", line 30
+    print("Test passed: error message displayed: ", error)x
+                                                          ^
+SyntaxError: invalid syntax
+</p><p style="color:maroon;">ImportError: Failed to import test module: test_login
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 394, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/loader.py", line 337, in _get_module_from_name
+    __import__(name)
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/test_login.py", line 30
+    print("Test passed: error message displayed: ", error)x
+                                                          ^
+SyntaxError: invalid syntax
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_registration.RegistrationTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_no_fist_name</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused"))</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1351, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1111, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1055, in send
+    self.connect()
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/test_registration.py", line 12, in setUp
+    super().setUp()
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/base_test.py", line 21, in setUp
+    self.driver = webdriver.Remote(
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 274, in __init__
+    self.start_session(capabilities)
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 370, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 447, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 407, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 431, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused"))
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_registration_existing_email</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused"))</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1351, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1111, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1055, in send
+    self.connect()
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/test_registration.py", line 12, in setUp
+    super().setUp()
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/base_test.py", line 21, in setUp
+    self.driver = webdriver.Remote(
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 274, in __init__
+    self.start_session(capabilities)
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 370, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 447, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 407, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 431, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused"))
+</p>
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_successful_registration</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused"))</p><p style="color:maroon;">Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 500, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1351, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1111, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1055, in send
+    self.connect()
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/test_registration.py", line 12, in setUp
+    super().setUp()
+  File "/home/student/Desktop/projekt_SELENIUM_python/projekt_SELENIUM_python/tests/base_test.py", line 21, in setUp
+    self.driver = webdriver.Remote(
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 274, in __init__
+    self.start_session(capabilities)
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 370, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 447, in execute
+    response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 407, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 431, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/poolmanager.py", line 457, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/student/Desktop/projekt_SELENIUM_python/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError("HTTPConnection(host='localhost', port=4444): Failed to establish a new connection: [Errno 111] Connection refused"))
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 0, Error: 3 -- Duration: 33 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
